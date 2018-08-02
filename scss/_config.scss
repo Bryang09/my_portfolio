@@ -2,7 +2,7 @@ $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
-$background-opacity: 0.3;
+$background-opacity: 0.6;
 
 
 @mixin easeOut {
@@ -31,6 +31,16 @@ $background-opacity: 0.3;
   }
 }
 
+// Set Text Color
+
+@function set-text-color($color) {
+  @if ( lightness($color) > 40 ) {
+    @return  #000;
+  } @else {
+    @return #fff;
+  }
+}
+
 // Media Query Mixins
 
 @mixin mediaSm {
@@ -38,18 +48,43 @@ $background-opacity: 0.3;
     @content;
   }
 }
+
 @mixin mediaMd {
   @media screen and (max-width: 768px) {
     @content;
   }
 }
-@mixin mediaLg {
-  @media screen and (min-width: 769px ) and (max-width: 1170px) {
+
+@mixin mdLg {
+  @media screen and (min-width: 769px ) and (max-width: 927px) {
     @content;
   }
 }
+
+@mixin mediaLg {
+  @media screen and (min-width: 928px ) and (max-width: 1170px) {
+    @content;
+  }
+}
+
 @mixin mediaXl {
   @media screen and (min-width: 1171px) {
+    @content;
+  }
+}
+
+@mixin projectsXl {
+  @media screen and (max-width: 1253px){
+    @content;
+  }
+}
+@mixin projectsLg {
+  @media screen and (max-width: 909px){
+    @content;
+  }
+}
+@mixin projectsSm {
+  @media screen and (max-width: 418px){
     @content;
   }
 }

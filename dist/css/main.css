@@ -94,6 +94,243 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
+* {
+  box-sizing: border-box; }
+
+body {
+  background: #444;
+  color: #fff;
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5; }
+  body#bg-img {
+    background: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#bg-img:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(68, 68, 68, 0.6);
+      z-index: -1; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 6rem; }
+  h1.sm-heading,
+  h2.sm-heading,
+  h3.sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: rgba(73, 73, 73, 0.5); }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%; }
+
+.text-secondary {
+  color: #eece1a; }
+
+main {
+  padding: 4rem;
+  height: 100%; }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.4rem; }
+      main .icons a:hover {
+        color: #eece1a;
+        transition: all 0.5s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 2rem; }
+
+#about {
+  padding: 1rem 4rem 2rem 4rem; }
+
+.about-info {
+  display: flex;
+  width: 100%;
+  margin: 0 auto; }
+  .about-info .about-portrait {
+    width: 30%;
+    margin: 0 auto; }
+    .about-info .about-portrait .portrait {
+      width: 250px;
+      height: 250px;
+      background: url("../img/portrait.jpg") no-repeat;
+      background-position-x: -35px;
+      border: 3px solid #eece1a;
+      border-radius: 50%;
+      margin: auto; }
+  .about-info .bio {
+    font-size: 1.5rem;
+    min-width: 70%;
+    margin-left: 4vw; }
+
+.columns {
+  display: flex;
+  margin-top: 10vh; }
+  .columns .skills,
+  .columns .courses {
+    width: 45%;
+    background: #515151;
+    border-bottom: 5px solid #eece1a;
+    padding: 0.5rem;
+    box-shadow: 5px 5px 10px #000; }
+  .columns .courses {
+    margin-left: 5vw; }
+  .columns .single-skill .languages {
+    display: flex; }
+    .columns .single-skill .languages p {
+      min-width: 50%; }
+      .columns .single-skill .languages p:nth-child(2) {
+        text-align: right;
+        padding-right: 1.2vw; }
+  .columns .single-skill .graph {
+    background: #444;
+    padding: 4px;
+    box-sizing: border-box;
+    border: 1px solid #eece1a;
+    border-radius: 5px; }
+    .columns .single-skill .graph .percentage {
+      background: #eece1a;
+      width: 100%;
+      height: 5px; }
+
+#projects {
+  padding: 4rem 0; }
+  #projects h1.lg-heading {
+    padding: 0 4rem; }
+
+.Project_Layout {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto; }
+  .Project_Layout .Layout_Divider {
+    display: flex;
+    flex-direction: row;
+    max-height: 410px;
+    min-height: 400px;
+    margin-bottom: 25px; }
+    .Project_Layout .Layout_Divider .Image_Link {
+      width: 50%; }
+      .Project_Layout .Layout_Divider .Image_Link img {
+        min-width: 100%;
+        max-width: 100%;
+        max-height: 380px;
+        box-shadow: 2px 2px 8px #000; }
+        .Project_Layout .Layout_Divider .Image_Link img:hover {
+          opacity: 0.5;
+          transition: all 0.5s ease-out; }
+    .Project_Layout .Layout_Divider .Explanation {
+      max-width: 45%;
+      min-width: 45%;
+      margin: 10px auto;
+      text-decoration: none;
+      padding-top: 10px;
+      display: flex;
+      flex-direction: column; }
+      .Project_Layout .Layout_Divider .Explanation h2 {
+        text-align: center;
+        margin: 0;
+        font-size: 45px; }
+      .Project_Layout .Layout_Divider .Explanation p {
+        width: 90%;
+        margin: 0 auto;
+        font-size: 25px;
+        text-decoration: none; }
+      .Project_Layout .Layout_Divider .Explanation .Button {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 3% auto 0 auto; }
+        .Project_Layout .Layout_Divider .Explanation .Button h5 {
+          margin: 0;
+          text-align: center;
+          font-size: 25px;
+          border: 1px solid #eece1a;
+          padding: 10px 25px;
+          color: #eece1a;
+          text-decoration: none; }
+          .Project_Layout .Layout_Divider .Explanation .Button h5:hover {
+            background-color: #eece1a;
+            color: #fff;
+            cursor: pointer; }
+
+.contact-text {
+  width: 90%; }
+
+.contact-wrapper {
+  display: flex; }
+  .contact-wrapper .boxes div {
+    width: 70%;
+    border: 2px solid #eece1a;
+    margin: 4vh 0;
+    padding: 1.2rem 2.2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    transition: all 0.5s ease-out; }
+    .contact-wrapper .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #eece1a;
+      color: #000;
+      cursor: pointer; }
+      .contact-wrapper .boxes div:hover span {
+        color: #000; }
+    .contact-wrapper .boxes div a {
+      width: 100%; }
+
+@media screen and (min-width: 928px) and (max-width: 1170px) {
+  .about-info .bio {
+    font-size: 1.02rem; }
+  .languages {
+    margin-top: 15px; }
+  .projects .project {
+    max-height: 100%;
+    min-height: 100%; }
+    .projects .project .project-description {
+      margin-top: 0;
+      padding-top: 0; }
+      .projects .project .project-description .button h5 {
+        margin: 1vh auto; } }
+
+@media screen and (min-width: 769px) and (max-width: 927px) {
+  #about {
+    padding: 1rem 3rem 2rem 3rem; }
+  .about-info .bio {
+    font-size: 1rem;
+    margin-left: 6vw;
+    min-width: 60%; }
+  .about-info .about-portrait .portrait {
+    width: 230px;
+    height: 230px;
+    background-position-x: -52px; }
+  .languages {
+    margin-top: 2.5vh; }
+  .columns .skills .graph .percentage {
+    height: 7px; }
+  .contact-wrapper .boxes div {
+    width: 100%; } }
+
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
@@ -122,75 +359,80 @@
       background-size: cover;
       background-position-x: -10px;
       width: 150px;
-      height: 150px; } }
+      height: 150px; }
+  .about-info {
+    flex-direction: column; }
+    .about-info .bio {
+      margin: 0; }
+    .about-info .about-portrait {
+      width: 90%; }
+      .about-info .about-portrait .portrait {
+        transform: translateX(1vw);
+        background-position-x: -35px; }
+  .columns {
+    flex-direction: column; }
+    .columns .skills,
+    .columns .courses {
+      width: 100%; }
+    .columns .courses {
+      margin: 3vh 0 0 0; }
+  .contact-wrapper .boxes div {
+    width: 100%;
+    font-size: 1rem; } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; } }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
+  .about-info .bio {
+    font-size: 1.15rem; }
+  h2.sm-heading {
+    font-size: 1.4rem; } }
 
-* {
-  box-sizing: border-box; }
+@media screen and (max-width: 1253px) {
+  .Project_Layout .Layout_Divider {
+    max-height: 100%;
+    min-height: 100%; }
+    .Project_Layout .Layout_Divider .Explanation {
+      margin-top: 0;
+      padding-top: 0; }
+      .Project_Layout .Layout_Divider .Explanation p {
+        font-size: 20px;
+        width: 100%; }
+      .Project_Layout .Layout_Divider .Explanation h3 {
+        font-size: 37px; }
+      .Project_Layout .Layout_Divider .Explanation .Button {
+        width: 30%;
+        margin-top: 3%;
+        margin-bottom: 15px; } }
 
-body {
-  background: #444;
-  color: #fff;
-  height: 100%;
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
-  body#bg-img {
-    background: url(../img/background.jpg);
-    background-attachment: fixed;
-    background-size: cover; }
-    body#bg-img:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(68, 68, 68, 0.3);
-      z-index: -1; }
+@media screen and (max-width: 909px) {
+  .Project_Layout .Layout_Divider {
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    min-height: 100%;
+    margin-bottom: 2%; }
+    .Project_Layout .Layout_Divider .Explanation {
+      border: 1px solid #000;
+      border-top: 0;
+      max-width: 100%;
+      min-width: 100%;
+      text-align: center;
+      background: #1e1e1e; }
+      .Project_Layout .Layout_Divider .Explanation p {
+        max-width: 95%; }
+    .Project_Layout .Layout_Divider .Image_Link {
+      width: 100%; } }
 
-h1,
-h2,
-h3 {
-  margin: 0;
-  font-weight: 400; }
-  h1.lg-heading,
-  h2.lg-heading,
-  h3.lg-heading {
-    font-size: 6rem; }
-  h1.sm-heading,
-  h2.sm-heading,
-  h3.sm-heading {
-    margin-bottom: 2rem;
-    padding: 0.2rem, 1rem;
-    background: rgba(73, 73, 73, 0.5); }
-
-a {
-  color: #fff;
-  text-decoration: none; }
-
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%; }
-
-.text-secondary {
-  color: #eece1a; }
-
-main {
-  padding: 4rem;
-  height: 100%; }
-  main .icons {
-    margin-top: 1rem; }
-    main .icons a {
-      padding: 0.4rem; }
-      main .icons a:hover {
-        color: #eece1a;
-        transition: all 0.5s ease-out; }
-  main#home {
-    overflow: hidden; }
-    main#home h1 {
-      margin-top: 20vh; }
+@media screen and (max-width: 418px) {
+  .Project_Layout .Layout_Divider .Explanation .Button {
+    width: 40%; }
+    .Project_Layout .Layout_Divider .Explanation .Button h5 {
+      font-size: 20px; }
+  #projects h1.lg-heading {
+    padding: 0 2rem; } }

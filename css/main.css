@@ -107,7 +107,8 @@ body {
   body#bg-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-repeat: no-repeat; }
     body#bg-img:after {
       content: '';
       position: absolute;
@@ -277,7 +278,7 @@ main {
             cursor: pointer; }
 
 .contact-text {
-  width: 90%; }
+  width: 100%; }
 
 .contact-wrapper {
   display: flex; }

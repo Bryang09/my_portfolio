@@ -102,13 +102,14 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    min-height: 100vh; }
     body#bg-img:after {
       content: '';
       position: absolute;
@@ -188,15 +189,14 @@ main {
 .columns {
   display: flex;
   margin-top: 10vh; }
-  .columns .skills,
   .columns .courses {
-    width: 45%;
+    width: 65%;
     background: #515151;
     border-bottom: 5px solid #eece1a;
     padding: 0.5rem;
-    box-shadow: 5px 5px 10px #000; }
-  .columns .courses {
-    margin-left: 5vw; }
+    box-shadow: 5px 5px 10px #000;
+    font-size: 1em;
+    margin: 0 auto; }
   .columns .single-skill .languages {
     display: flex; }
     .columns .single-skill .languages p {
@@ -259,13 +259,13 @@ main {
         font-size: 25px;
         text-decoration: none; }
       .Project_Layout .Layout_Divider .Explanation .Button {
-        width: 25%;
+        width: 45%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         margin: 3% auto 0 auto; }
         .Project_Layout .Layout_Divider .Explanation .Button h5 {
-          margin: 0;
+          margin: 0 10px;
           text-align: center;
           font-size: 25px;
           border: 1px solid #eece1a;
@@ -275,7 +275,8 @@ main {
           .Project_Layout .Layout_Divider .Explanation .Button h5:hover {
             background-color: #eece1a;
             color: #fff;
-            cursor: pointer; }
+            cursor: pointer;
+            text-shadow: 2px 2px #000; }
 
 .contact-text {
   width: 100%; }
@@ -392,7 +393,12 @@ main {
   .about-info .bio {
     font-size: 1.15rem; }
   h2.sm-heading {
-    font-size: 1.4rem; } }
+    font-size: 1.4rem; }
+  .Project_Layout .Layout_Divider .Explanation .Button {
+    display: flex;
+    flex-direction: column; }
+    .Project_Layout .Layout_Divider .Explanation .Button h5 {
+      margin: 10px auto; } }
 
 @media screen and (max-width: 1253px) {
   .Project_Layout .Layout_Divider {
